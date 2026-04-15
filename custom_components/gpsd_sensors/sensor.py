@@ -69,8 +69,8 @@ async def async_setup_platform(
                 break
 
     except (ConnectionError, EnvironmentError) as e:
-        _LOGGER.warning("Could not connect to GPSD.")
-        return False
+        _LOGGER.warning("Could not connect to GPSD: %s", e)
+        return
 
     async_add_entities([GpsdClient(hass, name, host, port, unique_id)])
 
@@ -157,7 +157,7 @@ class GpsdClient(SensorEntity):
             elif gps_data["class"] == "SKY":
                 _LOGGER.debug(gps_data)
                 self.nsat = gps_data.get("nSat", "n/a")
-                self.nsat = gps_data.get("uSat", "n/a")
+                self.usat = gps_data.get("uSat", "n/a")
                 break
             else:
                 _LOGGER.debug(gps_data)
