@@ -15,6 +15,13 @@ sensor:
     name: GPSd Sensors
 ```
 
+or just this code to your `sensors.yaml`
+
+```yaml
+- platform: gpsd_sensors
+  name: GPSd Sensors
+```
+
 By default, the integration looks for gpsd on `localhost` on port `2947`. If your
 `gpsd` server is on a different host, you must configure the the `host` and `port`:
 
