@@ -1,0 +1,20 @@
+{
+  "domain": "gpsd_sensors",
+  "name": "GPSd Sensors",
+  "codeowners": [
+    "@BreitiDE"
+  ],
+  "config_flow": false,
+  "dependencies": [],
+  "documentation": "https://github.com/BreitiDE/ha-gpsd-sensors",
+  "homekit": {},
+  "integration_type": "hub",
+  "iot_class": "local_polling",
+  "issue_tracker": "https://github.com/BreitiDE/ha-gpsd-sensors/issues",
+  "requirements": [
+    "gpsdclient==1.2.0"
+  ],
+  "ssdp": [],
+  "version": "0.0.1",
+  "zeroconf": []
+}
