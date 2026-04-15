@@ -26,7 +26,7 @@ sensor:
     port: 2947
 ```
 
-Thanks to zorrobyte <https://github.com/zorrobyte> and Djelibeybi <https://github.com/Djelibeybi> worked on the code before
+Thanks to zorrobyte <https://github.com/zorrobyte> and Djelibeybi <https://github.com/Djelibeybi> for their excellent work on the code, which I have adapted.
 
 ***
 
