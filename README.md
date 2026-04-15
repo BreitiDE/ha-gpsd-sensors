@@ -27,7 +27,7 @@ sensor:
 ```
 
 If you want individual data as sensors, you can get the data from the attributes
-array of the sensor. Add this to your template.yaml
+array of the sensor. Add this to your `template.yaml`
 
 ```yaml
 - sensor:
