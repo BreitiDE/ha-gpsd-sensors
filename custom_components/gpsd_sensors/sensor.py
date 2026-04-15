@@ -24,6 +24,8 @@ from slugify import slugify
 _LOGGER = logging.getLogger(__name__)
 
 ATTR_CLIMB = "climb"
+ATTR_NSAT = "nsat"
+ATTR_USAT = "usat"
 ATTR_ELEVATION = "elevation"
 ATTR_UTC_TIME = "utc_time"
 ATTR_SPEED = "speed"
@@ -89,6 +91,8 @@ class GpsdClient(SensorEntity):
         self.time = "n/a"
         self.speed = "n/a"
         self.climb = "n/a"
+        self.nsat = "n/a"
+        self.usat = "n/a"
         self.mode = 0
 
     @property
@@ -131,6 +135,8 @@ class GpsdClient(SensorEntity):
             ATTR_UTC_TIME: self.time,
             ATTR_SPEED: self.speed,
             ATTR_CLIMB: self.climb,
+            ATTR_NSAT: self.nsat,
+            ATTR_USAT: self.usat,
             ATTR_MODE: self.mode_str(),
         }
 
@@ -147,6 +153,11 @@ class GpsdClient(SensorEntity):
                 self.speed = gps_data.get("speed", "n/a")
                 self.climb = gps_data.get("climb", "n/a")
                 self.mode = gps_data.get("mode", "n/a")
+                break
+            elif gps_data["class"] == "SKY":
+                _LOGGER.debug(gps_data)
+                self.nsat = gps_data.get("nSat", "n/a")
+                self.nsat = gps_data.get("uSat", "n/a")
                 break
             else:
                 _LOGGER.debug(gps_data)
