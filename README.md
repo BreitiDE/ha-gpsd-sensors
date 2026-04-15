@@ -5,7 +5,7 @@ altitude, speed, climb and time data from an external `gpsd` daemon.
 
 ## Installation
 
-1. Add <https://github.com/Djelibeybi/ha-gpsd-sensors> as a custom `integration`
+1. Add <https://github.com/BreitiDE/ha-gpsd-sensors> as a custom `integration`
    repository in [HACS][HACS].
 2. Add at least the following to `configuration.yaml` :
 
