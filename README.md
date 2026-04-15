@@ -22,7 +22,7 @@ or just this code to your `sensors.yaml`
   name: GPSd Sensors
 ```
 
-By default, the integration looks for gpsd on `localhost` on port `2947`. If your
+Externel gpsd vs. local. By default, the integration looks for gpsd on `localhost` on port `2947`. If your
 `gpsd` server is on a different host, you must configure the the `host` and `port`:
 
 ```yaml
@@ -33,7 +33,7 @@ sensor:
     port: 2947
 ```
 
-If you want individual data as sensors, you can get the data from the attributes
+3. If you want individual data as sensors, you can get the data from the attributes
 array of the sensor. Add this to your `template.yaml`
 
 ```yaml
