@@ -1,0 +1,9 @@
+{
+    "name": "GPSd Sensors",
+    "render_readme": false,
+    "homeassistant": "2023.9.1",
+    "hacs": "1.28.4",
+    "domains": [
+        "sensor"
+    ]
+  }
